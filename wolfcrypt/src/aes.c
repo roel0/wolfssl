@@ -7262,7 +7262,7 @@ static int wc_AesGcmEncrypt_STM32(Aes* aes, byte* out, const byte* in, word32 sz
     word32 ctr[AES_BLOCK_SIZE/sizeof(word32)];
     word32 authhdr[AES_BLOCK_SIZE/sizeof(word32)];
     byte* authInPadded = NULL;
-    int authPadSz, wasAlloc = 0, useSwGhash = 0;
+    word32 authPadSz, wasAlloc = 0, useSwGhash = 0;
 
     ret = wc_AesGetKeySize(aes, &keySize);
     if (ret != 0)
@@ -7762,7 +7762,7 @@ static int wc_AesGcmDecrypt_STM32(Aes* aes, byte* out,
     word32 ctr[AES_BLOCK_SIZE/sizeof(word32)];
     word32 authhdr[AES_BLOCK_SIZE/sizeof(word32)];
     byte* authInPadded = NULL;
-    int authPadSz, wasAlloc = 0, tagComputed = 0;
+    word32 authPadSz, wasAlloc = 0, tagComputed = 0;
 
     ret = wc_AesGetKeySize(aes, &keySize);
     if (ret != 0)
