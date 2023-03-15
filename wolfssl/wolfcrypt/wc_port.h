@@ -26,9 +26,11 @@
 #ifndef WOLF_CRYPT_PORT_H
 #define WOLF_CRYPT_PORT_H
 
+#include <time.h>
 #include <wolfssl/wolfcrypt/settings.h>
 #include <wolfssl/wolfcrypt/visibility.h>
 
+#define HAVE_TM_TYPE 1
 #ifdef __cplusplus
     extern "C" {
 #endif
